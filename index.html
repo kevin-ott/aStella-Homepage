@@ -3,6 +3,24 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+		<meta name="application-name" content="Restaurant | a Stella" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="red" />
+		<meta name="theme-color" content="#c60000" />
+		<meta
+			name="description"
+			content="Homepage unseres italienischen Restaurants a Stella in Kaldauen, Siegburg"
+		/>
+		<meta
+			name="keywords"
+			content="Suppen, Salate, Antipasti, Pasta, Gnocchi, Pizza, Steinofen-Pizza, Fleisch, Restaurant, Italien, italiänische Küche, Getränke, Kaldauen, Siegburg"
+		/>
+		<meta name="robots" content="max-snippet:[80]" />
 		<title>Restaurant | a Stella</title>
 		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 		<link
@@ -58,8 +76,10 @@
 		<div class="divider"></div>
 		<section id="menu">
 			<h3>Unsere Speisekarte</h3>
-			<section>
-				<h4>Suppen</h4>
+			<details open>
+				<summary>
+					<h4>Suppen</h4>
+				</summary>
 				<div class="menu-item">
 					<!--TODO: punkt bei id und € hinterm preis einfügen in css  -->
 					<span class="id">01</span>
@@ -87,13 +107,15 @@
 					<span class="description">frische Tomatensuppe</span>
 					<span class="price">7,50</span>
 				</div>
-			</section>
+			</details>
 
-			<p onclick="toggleShowMore(this)" id="show-more">
+			<!-- <p onclick="toggleShowMore(this)" id="show-more">
 				&darr;&nbsp;Mehr anzeigen
-			</p>
-			<section class="hidden-item hidden">
-				<h4>Salate</h4>
+			</p> -->
+			<details open>
+				<summary>
+					<h4>Salate</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">10</span>
 					<span class="title">Insalata Verde</span>
@@ -162,9 +184,11 @@
 					</span>
 					<span class="price">12,50</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Antipasti</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Antipasti</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">20</span>
 					<span class="title">Mozzarella Caprese</span>
@@ -276,9 +300,11 @@
 					<span class="description">6 Stück mit Kräuterbutter</span>
 					<span class="price">4,50</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Pasta</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Pasta</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">40</span>
 					<span class="title">Spaghetti Bolognese</span>
@@ -419,13 +445,15 @@
 					<span class="price">11,50</span>
 				</div>
 				<p>(bei kleineren Portionen werden 1,00€ weniger berechnet)</p>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>
-					Gnocchi<span class="sm-h4"
-						>(spezielle Pasta-Art: kleine Klößchen)</span
-					>
-				</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>
+						Gnocchi<br /><span class="sm-h4"
+							>(spezielle Pasta-Art: kleine Klößchen)</span
+						>
+					</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">56</span>
 					<span class="title">Gnocchi</span>
@@ -448,9 +476,11 @@
 					<span class="description">Gnocchi in Gorgonzolasauce</span>
 					<span class="price">11,50</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Steinofen-Pizza</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Steinofen-Pizza</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">60</span>
 					<span class="title">Pizza Margherita</span>
@@ -737,9 +767,11 @@
 					<span class="description"></span>
 					<span class="price">2,00</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>vom Hähnchen</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>vom Hähnchen</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">120</span>
 					<span class="title">Petto di Pollo nach Chef-Art</span>
@@ -768,9 +800,11 @@
 				<p class="p-start">
 					Beilage: Gratinierte Kartoffeln und Gemüse
 				</p>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>von der Pute</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>von der Pute</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">130</span>
 					<span class="title">Saltimbocca alla Romana</span>
@@ -788,9 +822,11 @@
 				<p class="p-start">
 					Beilage: Gratinierte Kartoffeln und Gemüse
 				</p>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Fisch</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Fisch</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">140</span>
 					<span class="title">Salmone alla Griglia</span>
@@ -812,9 +848,11 @@
 				<p class="p-start">
 					Beilage: Granitierte Kartoffeln und Gemüse
 				</p>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Warme Getränke</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Warme Getränke</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">150</span>
 					<span class="title">Espresso</span>
@@ -855,9 +893,11 @@
 					<span class="title">Espresso Coretto</span>
 					<span class="price">4,20</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Heiße Spezialitäten</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Heiße Spezialitäten</h4>
+				</summary>
 				<div class="menu-item">
 					<span class="id">160</span>
 					<span class="title">Marnissimo Kaffee</span>
@@ -881,9 +921,11 @@
 					<span class="title">Heißer Amaretto mit Sahne</span>
 					<span class="price">5,50</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Kalte Getränke</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Kalte Getränke</h4>
+				</summary>
 				<div class="menu-item drink">
 					<span class="id">170</span>
 					<span class="title">Cola</span>
@@ -968,9 +1010,11 @@
 					<span class="size">0,70</span>
 					<span class="price">6,50</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Bier vom Fass</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Bier vom Fass</h4>
+				</summary>
 				<div class="menu-item drink">
 					<span class="id">190</span>
 					<span class="title">Bitburger Pils</span>
@@ -995,9 +1039,11 @@
 					<span class="size">0,30</span>
 					<span class="price">3,90</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Bier aus der Flasche</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Bier aus der Flasche</h4>
+				</summary>
 				<div class="menu-item drink">
 					<span class="id">194</span>
 					<span class="title">Bitburger Drive</span>
@@ -1024,9 +1070,11 @@
 					<span class="size">0,33</span>
 					<span class="price">4,50</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Aperitif und Likör</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Aperitif und Likör</h4>
+				</summary>
 				<div class="menu-item drink">
 					<span class="id">200</span>
 					<span class="title">Glas Prosecco</span>
@@ -1075,9 +1123,11 @@
 					<span class="size cl">2</span>
 					<span class="price">3,50</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Spirituosen</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Spirituosen</h4>
+				</summary>
 				<div class="menu-item drink">
 					<span class="id">230</span>
 					<span class="title">Jägermeister</span>
@@ -1142,9 +1192,11 @@
 					<span class="title">Campari Orange<sup>3</sup></span>
 					<span class="price">6,00</span>
 				</div>
-			</section>
-			<section class="hidden-item hidden">
-				<h4>Offene Weine</h4>
+			</details>
+			<details>
+				<summary>
+					<h4>Offene Weine</h4>
+				</summary>
 				<div class="menu-item wine">
 					<span class="small legend">0,25 l</span>
 					<span class="big legend">0,50 l</span>
@@ -1185,7 +1237,7 @@
 					<span class="small">5,00</span>
 					<span class="big">10,00</span>
 				</div>
-			</section>
+			</details>
 
 			<script src="./showMore.js"></script>
 		</section>
@@ -1208,8 +1260,8 @@
 
 			<p class="m-0"><b>Kontakt</b></p>
 			<a href="tel://+4922411278790">+49 2241 1278790</a>
-			<a href="/impressum.html">Impressum</a>
-			<a href="/agb.html">AGB</a>
+			<a href="./impressum.html">Impressum</a>
+			<a href="./agb.html">AGB</a>
 		</footer>
 	</body>
 </html>

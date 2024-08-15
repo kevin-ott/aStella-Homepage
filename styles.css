@@ -1,5 +1,5 @@
 :root {
-	--red: #a70000;
+	--red: #c60000;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
 		sans-serif;
@@ -12,6 +12,9 @@ header {
 	display: flex;
 	align-items: center;
 	padding-block: 0.8rem;
+	z-index: 10;
+	filter: drop-shadow(0px 2px 3px var(--red));
+	position: relative;
 }
 
 header > * {
@@ -27,16 +30,16 @@ header > * {
 }
 
 #open-status {
-	font-size: 1.7rem;
+	font-size: 1.4rem;
 	color: white;
 }
 
 #hero {
 	position: relative;
 	background-image: url("./hero.jpg");
-	background-size: fill;
-	/* background-repeat: no-repeat; */
+	filter: drop-shadow(0px 2px 3px black);
 	min-height: 45vh;
+	z-index: 9;
 }
 
 #hero a {
@@ -99,7 +102,12 @@ header > * {
 
 #map {
 	height: 300px;
-	z-index: 1;
+	z-index: 8;
+	pointer-events: none;
+}
+
+.leaflet-control-container {
+	display: none;
 }
 
 #address-wrapper {
@@ -112,6 +120,7 @@ header > * {
 	background-color: white;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
+	filter: drop-shadow(1px 2px 2px #141414);
 }
 
 #address-wrapper > p {
@@ -150,6 +159,7 @@ h3 {
 }
 
 #menu h4 {
+	display: inline;
 	margin: 0;
 	margin-bottom: 0.4rem;
 	font-weight: 600;
@@ -265,6 +275,10 @@ h3 {
 	padding-inline-start: 1rem;
 }
 
+#menu {
+	margin-bottom: 3rem;
+}
+
 #show-more {
 	text-decoration: underline;
 	cursor: pointer;
@@ -283,6 +297,7 @@ footer {
 	color: white;
 	display: flex;
 	flex-direction: column;
+	filter: drop-shadow(0px -2px 2px var(--red));
 }
 
 footer p {
@@ -293,8 +308,8 @@ footer a {
 	color: white;
 }
 
-footer a:nth-child(2) {
-	padding-bottom: 1rem;
+footer a:nth-child(5) {
+	padding-bottom: 1.5rem;
 }
 
 footer ol {
@@ -316,6 +331,7 @@ footer ol > li::before {
 
 .sm-h4 {
 	font-size: 1rem;
+	margin-left: 1rem;
 	font-weight: 400;
 }
 
@@ -325,4 +341,13 @@ footer ol > li::before {
 
 .p-start {
 	padding-left: 0.5rem;
+}
+
+summary {
+	cursor: pointer;
+	margin-bottom: 0.5rem;
+}
+
+details {
+	margin-bottom: 0.5rem;
 }
